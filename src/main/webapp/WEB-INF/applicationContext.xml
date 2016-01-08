@@ -15,6 +15,7 @@
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
+	<jpa:repositories base-package="com.jp.jba.repository" />
 
 	<jdbc:embedded-database type="HSQL" id="dataSource" />
 
@@ -39,5 +40,5 @@
 		id="transactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-	<jpa:repositories base-package="com.jp.jba.repository" />
+	
 </beans>
